@@ -88,6 +88,7 @@ html, body {
   font-size: 5vmin;
   padding-top: none;
   margin-top: none;
+  direction: rtl;
 }
 
 .fading-role span {
