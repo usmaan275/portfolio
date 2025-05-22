@@ -1,7 +1,7 @@
 html, body {
   margin: 0;
   padding: 0;
-  background: linear-gradient(135deg, #000213, #01032b); /* Black to dark gray */
+  background: black;
   color: #00ffff; /* Optional neon blue text color */
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
@@ -15,6 +15,7 @@ html, body {
 
 .App {
   display: flex;
+  background: linear-gradient(135deg, #000213, #01032b); /* Black to dark gray */
   font-family: "Amiri";
   font-size: 2.8vmin;
   min-height: 100dvh;
