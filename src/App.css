@@ -1,8 +1,7 @@
 html, body {
   margin: 0;
   padding: 0;
-  background: black;
-  color: #00ffff; /* Optional neon blue text color */
+  background: linear-gradient(135deg, #000213, #01032b);
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
