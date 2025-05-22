@@ -5,6 +5,10 @@ html, body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+body {
+  min-height: 100vh;
+}
+
 @font-face {
   font-family: "Amiri";
   src: url("./Amiri.ttf") format("truetype");
