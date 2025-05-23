@@ -70,6 +70,7 @@ html, body {
 }
 
 .profile-pic {
+  margin-top: 3dvh;
   width: 10dvh;
   height: 10dvh;
   object-fit: cover;
@@ -89,6 +90,10 @@ html, body {
   padding-top: none;
   margin-top: none;
   direction: rtl;
+}
+
+.profile p {
+  font-size: min(2.8dvh, 2vw);
 }
 
 .fading-role span {
