@@ -1,10 +1,17 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import '../App.css'; // If you're using external styles
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 
 function Education() {
   const navigate = useNavigate();
   const [activeSection, setActiveSection] = useState('');
+  const mainContentRef = useRef(null);
+
+  const scrollToTop = () => {
+    if (mainContentRef.current) {
+      mainContentRef.current.scrollTop = 0;
+    }
+  };
 
   return (
     <div className="education-container">
@@ -18,23 +25,23 @@ function Education() {
         {/* Sidebar */}
         <div className="sidebar">
           <h3>Secular Studies</h3>
-          <button onClick={() => setActiveSection('gcse')} className={activeSection === 'gcse' ? 'active' : ''}>GCSEs</button>
-          <button onClick={() => setActiveSection('alevels')} className={activeSection === 'alevels' ? 'active' : ''}>A-Levels</button>
-          <button onClick={() => setActiveSection('uni')} className={activeSection === 'uni' ? 'active' : ''}>University</button>
+          <button onClick={() => {setActiveSection('gcse'); scrollToTop();}} className={activeSection === 'gcse' ? 'active' : ''}>GCSEs</button>
+          <button onClick={() => {setActiveSection('alevels'); scrollToTop();}} className={activeSection === 'alevels' ? 'active' : ''}>A-Levels</button>
+          <button onClick={() => {setActiveSection('uni'); scrollToTop();}} className={activeSection === 'uni' ? 'active' : ''}>University</button>
 
           <h3>Islamic Studies</h3>
-          <button onClick={() => setActiveSection('hifz')} className={activeSection === 'hifz' ? 'active' : ''}>Ḥifẓ</button>
-          <button onClick={() => setActiveSection('qiraat')} className={activeSection === 'qiraat' ? 'active' : ''}>Qirāʾah</button>
-          <button onClick={() => setActiveSection('alim')} className={activeSection === 'alim' ? 'active' : ''}>ʿĀlimiyyah</button>
+          <button onClick={() => {setActiveSection('hifz'); scrollToTop();}} className={activeSection === 'hifz' ? 'active' : ''}>Ḥifẓ</button>
+          <button onClick={() => {setActiveSection('qiraat'); scrollToTop();}} className={activeSection === 'qiraat' ? 'active' : ''}>Qirāʾah</button>
+          <button onClick={() => {setActiveSection('alim'); scrollToTop();}} className={activeSection === 'alim' ? 'active' : ''}>ʿĀlimiyyah</button>
 
           <h3>Training Courses</h3>
-          <button onClick={() => setActiveSection('fire')} className={activeSection === 'fire' ? 'active' : ''}>Fire Marshall</button>
-          <button onClick={() => setActiveSection('firstaid')} className={activeSection === 'firstaid' ? 'active' : ''}>First Aid</button>
-          <button onClick={() => setActiveSection('safeguarding')} className={activeSection === 'safeguarding' ? 'active' : ''}>Safeguarding</button>
+          <button onClick={() => {setActiveSection('fire'); scrollToTop();}} className={activeSection === 'fire' ? 'active' : ''}>Fire Marshall</button>
+          <button onClick={() => {setActiveSection('firstaid'); scrollToTop();}} className={activeSection === 'firstaid' ? 'active' : ''}>First Aid</button>
+          <button onClick={() => {setActiveSection('safeguarding'); scrollToTop();}} className={activeSection === 'safeguarding' ? 'active' : ''}>Safeguarding</button>
         </div>
 
         {/* Main Content */}
-        <div className="main-content">
+        <div className="main-content" ref={mainContentRef}>
           {activeSection === '' && <p>Please select a category from the sidebar.</p>}
 
           {activeSection === 'gcse' && (
@@ -126,7 +133,7 @@ function Education() {
               </p>
               <h3>Application Inspiriation</h3>
               <p>
-              By the age of 21, I developed an application designed to support individuals looking to strengthen their memorisation of the Qurʾān. <a href="#">Click here</a> for more information about my projects.
+              By the age of 21, I developed an application designed to support individuals looking to strengthen their memorisation of the Qurʾān.<br></br><Link to="/projects">Click here</Link> for more information about my projects.
               </p>
             </div>
           )}
@@ -154,11 +161,11 @@ function Education() {
               <h2>ʿĀlimiyyah Programme</h2>
               <h3>Overview</h3>
               <p>
-              The ʿĀlimiyyah is a recognised six-year diploma covering a wide range of Islamic sciences. I am currently in my third year, having studied this programme alongside my university joint honours degree. Balancing both full-time academic studies and intensive Islamic learning has pushed me to develop strong discipline, structure, and time management skills. Juggling university, work, and ʿĀlimiyyah classes simultaneously has taught me how to prioritise tasks effectively and stay consistent under pressure. This experience has not only deepened my Islamic understanding but also shaped my approach to productivity, self-discipline, and lifelong learning.
+              The ʿĀlimiyyah programme is a recognised six-year diploma covering a wide range of Islamic sciences. I am currently in my third year, having studied this programme alongside my university joint honours degree. Balancing both full-time academic studies and intensive Islamic learning has pushed me to develop strong discipline, structure, and time management skills. Juggling university, work, and ʿĀlimiyyah classes simultaneously has taught me how to prioritise tasks effectively and stay consistent under pressure. This experience has not only deepened my Islamic understanding but also shaped my approach to productivity, self-discipline, and lifelong learning.
               </p>
               <h3>Arabic Language & Literature</h3>
               <p>
-              Arabic is the language of the Qurʾān, making it essential to study in depth. I have gained a strong understanding of <em>Naḥw</em> and <em>Ṣarf</em> (Arabic grammar) and have even authored books on these topics. I have also studied <em>Balāghah</em>, focusing on the Qurʾān’s linguistic beauty, eloquence, and rhetorical devices, and have even written a book on this as well. <a href="#">Click here</a> for more information about my books.
+              Arabic is the language of the Qurʾān, making it essential to study in depth. I have gained a strong understanding of <em>Naḥw</em> and <em>Ṣarf</em> (Arabic grammar) to the extent where I have been able to author books on these topics. I have also studied <em>Balāghah</em>, focusing on the Qurʾān’s linguistic beauty, eloquence, and rhetorical devices, and have even written a book on this as well.<br></br><Link to="/books">Click here</Link> for more information about my books.
               </p>
               <h3>Ḥadīth</h3>
               <p>
@@ -176,21 +183,21 @@ function Education() {
           )}
 
           {activeSection === 'fire' && (
-            <div>
+            <div className='description'>
               <h2>Fire Marshall Training</h2>
               <p>Certified in fire safety, risk assessment, and emergency response procedures to maintain workplace safety standards.</p>
             </div>
           )}
 
           {activeSection === 'firstaid' && (
-            <div>
+            <div className='description'>
               <h2>First Aid Training</h2>
               <p>Trained in first response techniques including CPR, wound management, and emergency care.</p>
             </div>
           )}
 
           {activeSection === 'safeguarding' && (
-            <div>
+            <div className='description'>
               <h2>Safeguarding Training</h2>
               <p>Completed safeguarding certification with emphasis on protecting vulnerable individuals and ensuring safe environments.</p>
             </div>

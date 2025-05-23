@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import '../App.css';
-import profilePic from '../logo.svg'; // Your image
+import profilePic from '../profilepic.png'; // Your image
 import { FaEnvelope, FaLinkedin, FaGithub } from 'react-icons/fa';
 
 function Home() {
@@ -60,7 +60,7 @@ function Home() {
             <div className="glow-card" onClick={() => navigate('/education')}>Education</div>
           </div>
           <div className='glow-wrapper'>
-            <div className="glow-card">Projects</div>
+            <div className="glow-card" onClick={() => navigate('/projects')}>Projects</div>
           </div>
           <div className='glow-wrapper'>
             <div className="glow-card">Books</div>

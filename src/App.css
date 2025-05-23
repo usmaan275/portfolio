@@ -70,8 +70,8 @@ html, body {
 
 .profile-pic {
   margin-top: 3dvh;
-  width: 10dvh;
-  height: 10dvh;
+  width: 12dvh;
+  height: 12dvh;
   object-fit: cover;
   border-radius: 10dvh;
   border: 0.3dvh solid white;
@@ -310,6 +310,40 @@ html, body {
   margin-top: 2vmin;
   font-size: 0.9em;
   font-style: italic;
+}
+
+.carousel-container {
+  position: relative;
+  margin: 4vmin auto;
+}
+
+.carousel-image {
+  width: 70%;
+  margin-left: 15%;
+  height: auto;
+  border-radius: 2vmin;
+  transition: all 2s ease-in-out;
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  font-size: 5vmin;
+  padding: 2vmin 2vmin;
+  cursor: pointer;
+  user-select: none;
+}
+
+.prev-btn {
+  left: 0.5vmin;
+}
+
+.next-btn {
+  right: 0.5vmin;
 }
 
 @media (orientation: portrait) {
