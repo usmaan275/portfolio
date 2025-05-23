@@ -2,7 +2,6 @@ html, body {
   margin: 0;
   padding: 0;
   background: black;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 @font-face {
@@ -217,10 +216,12 @@ html, body {
 }
 
 .back-button {
+  font-size: 2.2vmin;
+  font-family: "Amiri";
   position: absolute;
   top: 2vmin;
   left: 2vmin;
-  padding: 1vmin 2vmin;
+  padding: 0.5vmin 5vmin;
   background: linear-gradient(135deg, #000213, #01032b);
   border: 0.5vmin solid rgba(0, 123, 255, 0.3);
   border-radius: 0.8vmin;
@@ -268,7 +269,8 @@ html, body {
   border: 0.5vmin solid rgba(0, 123, 255, 0.3);
   border-radius: 0.8vmin;
   padding: 2vmin;
-  font-size: 2.2vmin;
+  font-size: 2.5vmin;
+  font-family: "Amiri";
   color: white;
   cursor: pointer;
 }
@@ -317,8 +319,8 @@ html, body {
   }
 
   .profile-wrapper {
-    top: 3.5vw;
-    left: 3.5vw;
+    top: 4.5vw;
+    left: 4.5vw;
   }
 
   .profile-pic {

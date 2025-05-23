@@ -18,14 +18,14 @@ function Education() {
         {/* Sidebar */}
         <div className="sidebar">
           <h3>Secular Studies</h3>
-          <button onClick={() => setActiveSection('gcse')} className={activeSection === 'gcse' ? 'active' : ''}>GCSE's</button>
+          <button onClick={() => setActiveSection('gcse')} className={activeSection === 'gcse' ? 'active' : ''}>GCSEs</button>
           <button onClick={() => setActiveSection('alevels')} className={activeSection === 'alevels' ? 'active' : ''}>A-Levels</button>
           <button onClick={() => setActiveSection('uni')} className={activeSection === 'uni' ? 'active' : ''}>University</button>
 
           <h3>Islamic Studies</h3>
-          <button onClick={() => setActiveSection('hifz')} className={activeSection === 'hifz' ? 'active' : ''}>Hifz</button>
-          <button onClick={() => setActiveSection('qiraat')} className={activeSection === 'qiraat' ? 'active' : ''}>Qiraat</button>
-          <button onClick={() => setActiveSection('alim')} className={activeSection === 'alim' ? 'active' : ''}>Alimiyyah</button>
+          <button onClick={() => setActiveSection('hifz')} className={activeSection === 'hifz' ? 'active' : ''}>Ḥifẓ</button>
+          <button onClick={() => setActiveSection('qiraat')} className={activeSection === 'qiraat' ? 'active' : ''}>Qirāʾah</button>
+          <button onClick={() => setActiveSection('alim')} className={activeSection === 'alim' ? 'active' : ''}>ʿĀlimiyyah</button>
 
           <h3>Training Courses</h3>
           <button onClick={() => setActiveSection('fire')} className={activeSection === 'fire' ? 'active' : ''}>Fire Marshall</button>
@@ -66,7 +66,7 @@ function Education() {
               <h2>University</h2>
               <h3>Queen Mary's University of London</h3>
               <p>
-              I currently attend Queen Mary's University of London, where I'm pursuing a BSc (Hons) in Computer Science and Mathematics — a joint honours degree. I've learnt a lot throughout this journey. From the wide range of modules I studied, I’ve gained skills in problem-solving, programming, data analysis, mathematical reasoning, algorithm design, software development and much more.
+              I attended Queen Mary's University of London, where I pursued a <strong>BSc (Hons) in Computer Science and Mathematics — a joint honours degree.</strong> I've learnt a lot throughout this journey. From the wide range of modules I studied, I’ve gained skills in problem-solving, programming, data analysis, mathematical reasoning, algorithm design, software development and much more.
               </p>
 
               <p>
@@ -110,23 +110,68 @@ function Education() {
           )}
 
           {activeSection === 'hifz' && (
-            <div>
-              <h2>Hifz</h2>
-              <p>Completed memorisation of the Quran under qualified scholars with rigorous review and recitation assessments.</p>
+            <div className='description'>
+              <h2>Ḥifẓ (Memorisation of the Qurʾān)</h2>
+              <h3>Overview</h3>
+              <p>
+              I began memorising the Qurʾān at a young age. The Qurʾān is divided into 30 <em>Ajzāʾ</em> (portions), and I completed my first <em>Juzʾ</em> (portion) at the age of 8. At 9, I officially joined the Ḥifẓ class at Masjid Noor in Luton. By the age of 16, I had completed the memorisation of the entire Qurʾān — a milestone that reflected years of discipline, perseverance, and sincere dedication.
+              </p>
+              <h3>Childhood Routine</h3>
+              <p>
+              My daily routine during this period was intense and structured. I would wake up early to prepare my memorisation before school, attend school during the day, and then spend three hours each evening at the mosque receiving professional guidance and support.
+              </p>
+              <h3>Refinements</h3>
+              <p>
+              By the age of 18, I had reached a level of memorisation that allowed me to recite the entire Qurʾān in a single sitting. A year later, at 19, I took this further by completing a full recitation in a single standing — a continuous, seven-and-a-half-hour prayer with no breaks, purely focused on reading the Holy Book. This experience remains one of my greatest spiritual blessings. And by 20, I undertook a full and detailed study of the meaning of the Qurʾān, essentially memorising its English translation.
+              </p>
+              <h3>Application Inspiriation</h3>
+              <p>
+              By the age of 21, I developed an application designed to support individuals looking to strengthen their memorisation of the Qurʾān. <a href="#">Click here</a> for more information about my projects.
+              </p>
             </div>
           )}
 
           {activeSection === 'qiraat' && (
-            <div>
-              <h2>Fiqh</h2>
-              <p>Studied Islamic Jurisprudence across all major schools with focus on legal reasoning, methodology, and modern applications.</p>
+            <div className='description'>
+              <h2>Qirāʾah (Recitation of the Qurʾān)</h2>
+              <h3>Makhārij</h3>
+              <p>
+              I completed a detailed study of the <em>Makhārij</em> (the precise articulation points) of each Arabic letter. This involved learning how to correctly position the tongue, lips, and teeth to ensure accurate pronunciation of every sound in the Qurʾān.
+              </p>
+              <h3>Tajwīd</h3>
+              <p>
+              I studied the rules of <em>Tajwīd</em>, which govern the proper pronunciation and recitation of the Qurʾān. This includes applying nasal sounds and vocal techniques to produce echoes and assimilations exactly as prescribed.
+              </p>
+              <h3>Ijāzah</h3>
+              <p>
+              An <em>Ijāzah</em> is granted when a student recites the Qurʾān to a qualified teacher who has recited to their teacher, forming an unbroken chain that traces back to the Prophet Muḥammad (ﷺ). I am actively attending sessions with a certified Qāriʾ (reciter with a verified chain) to refine my recitation and, In-shāʾ-Allāh, establish my own chain of transmission.
+              </p>
             </div>
           )}
 
           {activeSection === 'alim' && (
-            <div>
-              <h2>Hadith</h2>
-              <p>Covered texts on the sayings and practices of the Prophet (S.A.W.) and his companions, including contextual study and chain authentication.</p>
+            <div className='description'>
+              <h2>ʿĀlimiyyah Programme</h2>
+              <h3>Overview</h3>
+              <p>
+              The ʿĀlimiyyah is a recognised six-year diploma covering a wide range of Islamic sciences. I am currently in my third year, having studied this programme alongside my university joint honours degree. Balancing both full-time academic studies and intensive Islamic learning has pushed me to develop strong discipline, structure, and time management skills. Juggling university, work, and ʿĀlimiyyah classes simultaneously has taught me how to prioritise tasks effectively and stay consistent under pressure. This experience has not only deepened my Islamic understanding but also shaped my approach to productivity, self-discipline, and lifelong learning.
+              </p>
+              <h3>Arabic Language & Literature</h3>
+              <p>
+              Arabic is the language of the Qurʾān, making it essential to study in depth. I have gained a strong understanding of <em>Naḥw</em> and <em>Ṣarf</em> (Arabic grammar) and have even authored books on these topics. I have also studied <em>Balāghah</em>, focusing on the Qurʾān’s linguistic beauty, eloquence, and rhetorical devices, and have even written a book on this as well. <a href="#">Click here</a> for more information about my books.
+              </p>
+              <h3>Ḥadīth</h3>
+              <p>
+              As part of our Ḥadīth studies, we have covered collections such as <em>Arbaʿūna Ḥadīthan</em> and <em>Riyāḍ-uṣ-Ṣāliḥīn</em>, which offer profound insight into the wisdom, character, lifestyle, and intelligence of the Prophet Muḥammad (ﷺ).
+              </p>
+              <h3>Fiqh (Islamic Jurisprudence)</h3>
+              <p>
+              I have studied key legal texts including <em>Ascent to Felicity</em> and <em>Mukhtaṣar-ul-Qudūrī</em>, which have provided me with foundational knowledge in Islamic rulings and law.
+              </p>
+              <h3>History</h3>
+              <p>
+              Our curriculum has included works like <em>Qaṣaṣ-un-Nabiyyīn</em> and <em>Uṣūl-ush-Shāshī</em>, offering deep insight into the lives of the Prophets, their companions, and the righteous scholars of the past. These studies have helped shape my values and understanding of not only Islamic legacy, but traversing life itself.
+              </p>
             </div>
           )}
 
