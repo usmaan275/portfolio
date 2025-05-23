@@ -11,6 +11,16 @@ function Home() {
   const [fade, setFade] = useState(true);
   const roles = ["Software Engineer", "Data Scientist", "AI Researcher", "Web Developer"];
 
+  const getIsPortrait = () => window.matchMedia("(orientation: portrait)").matches;
+  const [isPortrait, setIsPortrait] = useState(getIsPortrait());
+  useEffect(() => {
+    const mediaQuery = window.matchMedia("(orientation: portrait)");
+    const handleChange = () => setIsPortrait(mediaQuery.matches);
+
+    mediaQuery.addEventListener("change", handleChange);
+    return () => mediaQuery.removeEventListener("change", handleChange);
+  }, []);
+
   useEffect(() => {
     const interval = setInterval(() => {
       setFade(false); // trigger fade-out
@@ -33,7 +43,7 @@ function Home() {
             <div className="arabic-name">عثمان أفضل</div>
             <p>- BSc (Hons) Computer Science and Mathematics</p>
             <p className="fading-role">- Aspiring <span className={fade ? 'fade-in' : ''}>{roles[currentRoleIndex]}</span></p>
-            <p>- Check out my experience and projects! 👉</p>
+            <p>- Check out my experience and projects! {isPortrait ? "👇" : "👉"}</p>
 
             <div className="social-icons">
               <a href="mailto:usmaan.afzal789@gmail.com"><FaEnvelope /></a>

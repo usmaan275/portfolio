@@ -208,6 +208,7 @@ html, body {
 
 .education-container {
   height: 100dvh;
+  width: 100vw;
 }
 
 .back-button {
@@ -215,47 +216,68 @@ html, body {
   top: 2vmin;
   left: 2vmin;
   padding: 1vmin 2vmin;
-  background: transparent;
-  border: 1px solid white;
+  background: linear-gradient(135deg, #000213, #01032b);
+  border: 0.5vmin solid rgba(0, 123, 255, 0.3);
+  border-radius: 0.8vmin;
   color: white;
   cursor: pointer;
 }
 
+.back-button:hover {
+  border: 0.5vmin solid #00f0ff;
+  background: #070a41;
+  transition: 1s;
+  color: #00f0ff;
+}
+
 .education-title {
   text-align: center;
-  margin-top: 2vmin;
   font-size: 4vmin;
 }
 
 .education-layout {
+  position: absolute;
+  top: 12dvh;
   display: flex;
-  margin-top: 6vmin;
-  height: 80%;
+  height: 88dvh;
+  width: 100vw;
 }
 
 .sidebar {
   width: 25%;
   background: rgba(0, 0, 0, 0.5);
-  padding: 2vmin;
+  padding: 2vw;
   display: flex;
   flex-direction: column;
-  gap: 1vmin;
+  gap: 1.5vmin;
+  overflow-y: auto;
 }
 
 .sidebar h3 {
-  font-size: 1vmin;
-  margin-top: 2vmin;
+  font-size: 3vmin;
+  margin-bottom: -1.2vmin;
 }
 
 .sidebar button {
-  background: transparent;
-  border: 1px solid white;
-  padding: 1vmin;
+  background: linear-gradient(135deg, #000213, #01032b);
+  border: 0.5vmin solid rgba(0, 123, 255, 0.3);
+  border-radius: 0.8vmin;
+  padding: 2vmin;
+  font-size: 2.2vmin;
   color: white;
   cursor: pointer;
 }
 
+.sidebar button:hover {
+  border: 0.5vmin solid #00f0ff;
+  background: #070a41;
+  transition: 0.8s;
+  color: #00f0ff;
+}
+
 .sidebar button.active {
+  transition: 0.8s;
+  border: 0.5vmin solid #00f0ff;
   background: #00f0ff;
   color: black;
   font-weight: bold;
@@ -264,13 +286,67 @@ html, body {
 .main-content {
   width: 75%;
   background: rgba(255, 255, 255, 0.5);
-  padding: 4vmin;
+  padding: 2vmin;
   color: black;
   overflow-y: auto;
+}
+
+.description h2 {
+  margin-bottom: -1vmin;
+}
+
+.description h3 {
+  margin-bottom: -3vmin;
 }
 
 .disclaimer {
   margin-top: 2vmin;
   font-size: 0.9em;
   font-style: italic;
+}
+
+@media (orientation: portrait) {
+  .profile-background, .profile-wrapper {
+    height: 50dvh;
+    width: 90vw;
+  }
+
+  .profile-wrapper {
+    top: 3.5vw;
+    left: 3.5vw;
+  }
+
+  .profile-pic {
+    height: 6dvh;
+    width: 6dvh;
+  }
+
+  .latin-name {
+    font-size: 4dvh;
+  }
+
+  .arabic-name {
+    font-size: 3dvh;
+  }
+
+  .profile p {
+    font-size: 3.2vw;
+  }
+
+  .social-icons a {
+    font-size: 4dvh;
+    margin-left: 5vw;
+    margin-right: 5vw;
+  }
+
+  .grid-section {
+    bottom: 5dvh;
+    height: 40dvh;
+    width: 86vw;
+  }
+
+  .education-layout {
+    top: 8dvh;
+    height: 92dvh;
+  }
 }
