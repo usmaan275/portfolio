@@ -34,7 +34,6 @@ html, body {
   align-items: center;
   justify-content: center;
   z-index: 1;
-  padding: 1vmin;
 }
 
 .profile-wrapper {
@@ -47,7 +46,7 @@ html, body {
   align-items: center;
   justify-content: center;
   border-radius: 0.8vmax;
-  padding: 1.5vmin; /* Thickness of the border */
+  padding: 0.5vmin; /* Thickness of the border */
   background: conic-gradient(
     from var(--angle),
     #00f0ff,
@@ -61,6 +60,7 @@ html, body {
 }
 
 .profile {
+  padding: none;
   position: relative;
   text-align: center;
 }
@@ -70,10 +70,10 @@ html, body {
 }
 
 .profile-pic {
-  width: 12vmin;
-  height: 12vmin;
+  width: 10vmin;
+  height: 10vmin;
   object-fit: cover;
-  border-radius: 12vmin;
+  border-radius: 10vmin;
   border: 0.3vmin solid white;
 }
 
@@ -317,8 +317,8 @@ html, body {
   }
 
   .profile-pic {
-    height: 6dvh;
-    width: 6dvh;
+    height: 5dvh;
+    width: 5dvh;
   }
 
   .latin-name {
@@ -330,7 +330,7 @@ html, body {
   }
 
   .profile p {
-    font-size: 3.2vw;
+    font-size: min(2dvh, 3vw);
   }
 
   .social-icons a {
