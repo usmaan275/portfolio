@@ -313,16 +313,19 @@ html, body {
 }
 
 .carousel-container {
+  background:rgba(0, 0, 0, 0.2);
   position: relative;
-  margin: 4vmin auto;
+  padding: 1.5vw;
+  border-radius: 2vmin;
+  display: flex;
+  justify-content: center; /* center horizontally */
+  align-items: center;     /* center vertically if needed */
 }
 
 .carousel-image {
-  width: 70%;
-  margin-left: 15%;
-  height: auto;
+  max-width: 80%;
+  height: 25vw;
   border-radius: 2vmin;
-  transition: all 2s ease-in-out;
 }
 
 .carousel-btn {
@@ -333,17 +336,22 @@ html, body {
   color: white;
   border: none;
   font-size: 5vmin;
-  padding: 2vmin 2vmin;
+  padding: 3vw 1vw;
   cursor: pointer;
   user-select: none;
+  border-radius: 2vmin;
+}
+
+.carousel-btn:hover {
+  background: rgba(0, 0, 0, 0.7);
 }
 
 .prev-btn {
-  left: 0.5vmin;
+  left: 1.5vw;
 }
 
 .next-btn {
-  right: 0.5vmin;
+  right: 1.5vw;
 }
 
 @media (orientation: portrait) {

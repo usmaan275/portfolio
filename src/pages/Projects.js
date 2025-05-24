@@ -2,7 +2,7 @@ import React, { useState, useRef } from 'react';
 import '../App.css'; // If you're using external styles
 import { useNavigate } from 'react-router-dom';
 
-function Education() {
+function Projects() {
   const navigate = useNavigate();
   const [activeSection, setActiveSection] = useState('');
   const mainContentRef = useRef(null);
@@ -13,18 +13,19 @@ function Education() {
     }
   };
 
-  const graphicImages = [
-    '/poo.png',
-    '/logo192.png',
-    '/logo512.png',
-  ];
+  const importAll = (r) => r.keys().map(r);
+  const computerGraphics = importAll(require.context('../imageCarousel/computerGraphics', false, /\.(png|jpe?g|svg|gif|mp4)$/));
+  
   const [imageIndex, setImageIndex] = useState(0);
-  const handleNext = () => {
-    setImageIndex((prev) => (prev + 1) % graphicImages.length);
+  const resetImageIndex = () => {
+    setImageIndex(0);
+  }
+  const handleNext = (imagesArray) => {
+    setImageIndex((prev) => (prev + 1) % imagesArray.length);
   };
-  const handlePrev = () => {
-    setImageIndex((prev) => (prev - 1 + graphicImages.length) % graphicImages.length);
-  };  
+  const handlePrev = (imagesArray) => {
+    setImageIndex((prev) => (prev - 1 + imagesArray.length) % imagesArray.length);
+  };
 
   return (
     <div className="education-container">
@@ -39,14 +40,14 @@ function Education() {
         <div className="sidebar">
           <h3>Personal Projects</h3>
           <button onClick={() => {setActiveSection('portfolio'); scrollToTop();}} className={activeSection === 'portfolio' ? 'active' : ''}>This Portfolio</button>
-          <button onClick={() => {setActiveSection('graphics'); scrollToTop();}} className={activeSection === 'graphics' ? 'active' : ''}>3D Image Generator</button>
-          <button onClick={() => {setActiveSection('image'); scrollToTop();}} className={activeSection === 'image' ? 'active' : ''}>Image Processor</button>
+          <button onClick={() => {setActiveSection('graphics'); scrollToTop(); resetImageIndex();}} className={activeSection === 'graphics' ? 'active' : ''}>3D Image Generator</button>
+          <button onClick={() => {setActiveSection('image'); scrollToTop(); resetImageIndex();}} className={activeSection === 'image' ? 'active' : ''}>Image Processor</button>
 
           <h3>Client Projects</h3>
-          <button onClick={() => {setActiveSection('quranquiz'); scrollToTop();}} className={activeSection === 'quranquiz' ? 'active' : ''}>Quran Quiz</button>
-          <button onClick={() => {setActiveSection('staffsync'); scrollToTop();}} className={activeSection === 'staffsync' ? 'active' : ''}>StaffSync</button>
-          <button onClick={() => {setActiveSection('hearing'); scrollToTop();}} className={activeSection === 'hearing' ? 'active' : ''}>ValueHearing</button>
-          <button onClick={() => {setActiveSection('jml'); scrollToTop();}} className={activeSection === 'jml' ? 'active' : ''}>CSV Writer</button>
+          <button onClick={() => {setActiveSection('quranquiz'); scrollToTop(); resetImageIndex();}} className={activeSection === 'quranquiz' ? 'active' : ''}>Quran Quiz</button>
+          <button onClick={() => {setActiveSection('staffsync'); scrollToTop(); resetImageIndex();}} className={activeSection === 'staffsync' ? 'active' : ''}>StaffSync</button>
+          <button onClick={() => {setActiveSection('hearing'); scrollToTop(); resetImageIndex();}} className={activeSection === 'hearing' ? 'active' : ''}>ValueHearing</button>
+          <button onClick={() => {setActiveSection('jml'); scrollToTop(); resetImageIndex();}} className={activeSection === 'jml' ? 'active' : ''}>CSV Writer</button>
         </div>
 
         {/* Main Content */}
@@ -65,6 +66,34 @@ function Education() {
           {activeSection === 'graphics' && (
             <div className='description'>
               <h2>WebGL 3D Image Generator</h2>
+              <p></p>
+              {/* Carousel */}
+              <div className="carousel-container">
+                {computerGraphics.map((file, idx) =>
+                  idx === imageIndex ? (
+                    file.endsWith('.mp4') ? (
+                      <video
+                        key={idx}
+                        src={file}
+                        className="carousel-image"
+                        autoPlay
+                        loop
+                        muted
+                        playsInline
+                      />
+                    ) : (
+                      <img
+                        key={idx}
+                        src={file}
+                        alt={`Slide ${idx+1}`}
+                        className="carousel-image"
+                      />
+                    )
+                  ) : null
+                )}
+                <button onClick={() => handlePrev(computerGraphics)} className="carousel-btn prev-btn">‹</button>
+                <button onClick={() => handleNext(computerGraphics)} className="carousel-btn next-btn">›</button>
+              </div>
               <h3>Overview</h3>
                 <p>
                 As part of the Computer Graphics module at university, I worked on a WebGL-based 3D image generator. This project was developed over a series of lab sessions focused on advanced 3D graphics concepts and real-time rendering techniques. It allowed me to explore both the theoretical and practical aspects of modern computer graphics, applying them in a hands-on environment.
@@ -80,6 +109,7 @@ function Education() {
                 <li>Bump mapping and advanced texture filtering</li>
                 <li>RGB, alpha, and gamma corrections</li>
                 <li>Vignetting and post-processing effects</li>
+                <li>Interactive image that dynamically changes colour based on mouse position</li>
                 <li>Integration of real-world images with generated 3D content</li>
                 </ul>
                 <h3>Outcomes</h3>
@@ -92,16 +122,16 @@ function Education() {
         {activeSection === 'image' && (
             <div className='description'>
               <h2>Java Image Processor</h2>
-              {/* Carousel */}
               <p></p>
+              {/* Carousel */}
               <div className="carousel-container">
                 <img
-                    src={graphicImages[imageIndex]}
+                    src={computerGraphics[imageIndex]}
                     alt={`Render ${imageIndex + 1}`}
                     className="carousel-image"
                 />
-                <button onClick={handlePrev} className="carousel-btn prev-btn">‹</button>
-                <button onClick={handleNext} className="carousel-btn next-btn">›</button>
+                <button onClick={() => handlePrev(computerGraphics)} className="carousel-btn prev-btn">‹</button>
+                <button onClick={() => handleNext(computerGraphics)} className="carousel-btn next-btn">›</button>
               </div>
             </div>
           )}
@@ -184,4 +214,4 @@ function Education() {
   );
 }
 
-export default Education;
+export default Projects;
