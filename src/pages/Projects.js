@@ -17,6 +17,10 @@ function Projects() {
   const importAll = (r) => r.keys().map(r);
   const computerGraphics = importAll(require.context('../imageCarousel/computerGraphics', false, /\.(png|mp4)$/));
   const imageProcessing = importAll(require.context('../imageCarousel/imageProcessing', false, /\.(png)$/));
+  const quranquiz = importAll(require.context('../imageCarousel/quranquiz', false, /\.(png)$/));
+  const staffsync = importAll(require.context('../imageCarousel/staffsync', false, /\.(png)$/));
+  const hearing = importAll(require.context('../imageCarousel/hearing', false, /\.(png)$/));
+  const jml = importAll(require.context('../imageCarousel/jml', false, /\.(png)$/));
 
   const [imageIndex, setImageIndex] = useState(0);
   const resetImageIndex = () => {
@@ -214,74 +218,175 @@ function Projects() {
 
           {activeSection === 'quranquiz' && (
             <div className='description'>
-              <h2>Quba Academy - Quran Quiz Application</h2>
+              <h2>Quba Academy — Quran Quiz Application</h2>
+              <p></p>
+              {/* Carousel */}
+              <div className="carousel-container">
+                <>
+                {loading && <div className="spinner">Loading...</div>}
+                <img
+                    src={quranquiz[imageIndex]}
+                    alt={`Render ${imageIndex + 1}`}
+                    className="carousel-image"
+                    onLoad={() => setLoading(false)}
+                    style={{ display: loading ? 'none' : 'block' }}
+                />
+                </>
+                <button onClick={() => handlePrev(quranquiz)} className="carousel-btn prev-btn">‹</button>
+                <button onClick={() => handleNext(quranquiz)} className="carousel-btn next-btn">›</button>
+              </div>
               <h3>Overview</h3>
               <p>
-              I began memorising the Qurʾān at a young age. The Qurʾān is divided into 30 <em>Ajzāʾ</em> (portions), and I completed my first <em>Juzʾ</em> (portion) at the age of 8. At 9, I officially joined the Ḥifẓ class at Masjid Noor in Luton. By the age of 16, I had completed the memorisation of the entire Qurʾān — a milestone that reflected years of discipline, perseverance, and sincere dedication.
+              This project was my final year university project. I developed it myself whilst being sponsored by <a href="https://qubaacademy.co.uk/" target="_blank">Quba Academy</a>. It’s a gamified web application designed to assist with Quran memorisation (Hifdh) through interactive modes and user-friendly design. The app is now officially live at <a href="https://qubaquranquiz.vercel.app" target="_blank">qubaquranquiz.vercel.app</a> and is being integrated into the Quba Academy website.
               </p>
-              <h3>Childhood Routine</h3>
+
+              <h3>Key Features</h3>
+              <ul>
+                <li><strong>Arabic Hifdh Mode:</strong> Randomised Ayah selection, phonetic search bar (e.g., typing "b" yields "ب"), dynamic passage lengths, speech recognition, and real-time input validation.</li>
+                <li><strong>English Hifdh Mode:</strong> Full Ayah display with adjusted logic for translated text difficulty.</li>
+                <li><strong>Multiple Choice Quiz:</strong> Designed for recall practice and memorisation accuracy.</li>
+                <li><strong>Quranic Hangman:</strong> Includes all 114 Surahs, Arabic display with filtered particles, and a themed interface.</li>
+              </ul>
+
+              <h3>Technical Highlights</h3>
+              <ul>
+                <li>Frontend: React.js</li>
+                <li>Search: Custom phonetic and diacritic-insensitive logic with local JSON (quran.json)</li>
+                <li>Speech: Browser Web Speech API for voice recognition</li>
+                <li>Shaders: Gameflow control with smooth transitions and performance tuning</li>
+              </ul>
+
+              <h3>Testing & Outcomes</h3>
               <p>
-              My daily routine during this period was intense and structured. I would wake up early to prepare my memorisation before school, attend school during the day, and then spend three hours each evening at the mosque receiving professional guidance and support.
+              Built with real-time feedback from Quran memorisers and Islamic educators, such as; Shaykh Haitham al-Haddad, Shaykh Abdul Majid, etc., the app blends modern web development with classical learning needs. It offers Arabic and English memorisation tools, a custom-themed Hangman game, and a multiple-choice quiz, all designed with performance, usability, and engagement in mind. The application went through iterative user testing to refine gameplay balance, interface clarity, and memorisation difficulty. Feedback from active memorizers helped shape final release features. This project solidified my ability to design accessible educational tools with real-world impact and collaboration. Of course, the app is now officially deployed and the source code is also available on <a href="https://github.com/usmaan275/Quran-Quiz" target="_blank">github.com/usmaan275/Quran-Quiz</a>.
               </p>
-              <h3>Refinements</h3>
-              <p>
-              By the age of 18, I had reached a level of memorisation that allowed me to recite the entire Qurʾān in a single sitting. A year later, at 19, I took this further by completing a full recitation in a single standing — a continuous, seven-and-a-half-hour prayer with no breaks, purely focused on reading the Holy Book. This experience remains one of my greatest spiritual blessings. And by 20, I undertook a full and detailed study of the meaning of the Qurʾān, essentially memorising its English translation.
-              </p>
-              <h3>Application Inspiriation</h3>
-              <p>
-              By the age of 21, I developed an application designed to support individuals looking to strengthen their memorisation of the Qurʾān.<br></br><a href="#">Click here</a> for more information about my projects.
-              </p>
+
             </div>
           )}
 
           {activeSection === 'staffsync' && (
             <div className='description'>
-              <h2>FDM Ltd - StaffSync Employee Portal</h2>
-              <h3>Makhārij</h3>
+              <h2>FDM Ltd — StaffSync Employee Portal</h2>
+              <p></p>
+              {/* Carousel */}
+              <div className="carousel-container">
+                <>
+                {loading && <div className="spinner">Loading...</div>}
+                <img
+                    src={staffsync[imageIndex]}
+                    alt={`Render ${imageIndex + 1}`}
+                    className="carousel-image"
+                    onLoad={() => setLoading(false)}
+                    style={{ display: loading ? 'none' : 'block' }}
+                />
+                </>
+                <button onClick={() => handlePrev(staffsync)} className="carousel-btn prev-btn">‹</button>
+                <button onClick={() => handleNext(staffsync)} className="carousel-btn next-btn">›</button>
+              </div>
+              <h3>Overview</h3>
               <p>
-              I completed a detailed study of the <em>Makhārij</em> (the precise articulation points) of each Arabic letter. This involved learning how to correctly position the tongue, lips, and teeth to ensure accurate pronunciation of every sound in the Qurʾān.
+              StaffSync is a full-stack employee portal web application built using Next.js as part of the ECS506U Software Engineering Group Project at university. Developed for FDM Group, the platform was designed to streamline internal communication, document handling, and support systems within a professional work environment. This was a collaborative team project (Group 14), and the final solution was tailored to meet the needs of enterprise-level HR and operations management.
               </p>
-              <h3>Tajwīd</h3>
+
+              <h3>My Role</h3>
               <p>
-              I studied the rules of <em>Tajwīd</em>, which govern the proper pronunciation and recitation of the Qurʾān. This includes applying nasal sounds and vocal techniques to produce echoes and assimilations exactly as prescribed.
+              I led the development of the user profile and settings sections, focusing on managing personal information securely and efficiently. This involved handling form validation, data storage, and seamless user experience with update feedback. I also contributed to the planning and integration of the authentication flow and overall UI consistency across the platform.
               </p>
-              <h3>Ijāzah</h3>
+
+              <h3>Key Features</h3>
+              <ul>
+                <li><strong>Announcements:</strong> Admins can create, edit, and publish internal announcements viewable on the home dashboard.</li>
+                <li><strong>Leave Requests:</strong> Employees can request leave and track approval status through a structured request form and admin interface.</li>
+                <li><strong>HR Document Management:</strong> Upload, categorise, and download internal documents such as policies, contracts, and onboarding materials.</li>
+                <li><strong>Ticket System:</strong> Submit, assign, and track user tickets with priority and status filtering.</li>
+                <li><strong>User Management:</strong> Admin panel for adding/removing users, assigning roles, and managing permissions.</li>
+                <li><strong>Dashboard Notifications:</strong> Homepage displays recent activity, pending tasks, and announcement highlights.</li>
+              </ul>
+
+              <h3>Outcomes</h3>
               <p>
-              An <em>Ijāzah</em> is granted when a student recites the Qurʾān to a qualified teacher who has recited to their teacher, forming an unbroken chain that traces back to the Prophet Muḥammad (ﷺ). I am actively attending sessions with a certified Qāriʾ (reciter with a verified chain) to refine my recitation and, In-shāʾ-Allāh, establish my own chain of transmission.
+              Our team was awarded <strong>Best Design</strong> across all participating groups, recognising our clean interface, thoughtful user experience, and consistent branding throughout the application. View the full source code on <a href="https://github.com/usmaan275/staffsync" target="_blank">github.com/usmaan275/staffsync</a>.
               </p>
+
             </div>
           )}
 
           {activeSection === 'hearing' && (
             <div className='description'>
-              <h2>ValueHearing - Online Hearing Aids Store</h2>
+              <h2>ValueHearing — Online Hearing Aids Store</h2>
+              <p></p>
+              {/* Carousel */}
+              <div className="carousel-container">
+                <>
+                {loading && <div className="spinner">Loading...</div>}
+                <img
+                    src={hearing[imageIndex]}
+                    alt={`Render ${imageIndex + 1}`}
+                    className="carousel-image"
+                    onLoad={() => setLoading(false)}
+                    style={{ display: loading ? 'none' : 'block' }}
+                />
+                </>
+                <button onClick={() => handlePrev(hearing)} className="carousel-btn prev-btn">‹</button>
+                <button onClick={() => handleNext(hearing)} className="carousel-btn next-btn">›</button>
+              </div>
               <h3>Overview</h3>
               <p>
-              The ʿĀlimiyyah programme is a recognised six-year diploma covering a wide range of Islamic sciences. I am currently in my third year, having studied this programme alongside my university joint honours degree. Balancing both full-time academic studies and intensive Islamic learning has pushed me to develop strong discipline, structure, and time management skills. Juggling university, work, and ʿĀlimiyyah classes simultaneously has taught me how to prioritise tasks effectively and stay consistent under pressure. This experience has not only deepened my Islamic understanding but also shaped my approach to productivity, self-discipline, and lifelong learning.
+              This project was a contracted web development job for <strong>ValueHearing</strong>, a professional retailer of premium hearing aids. Working alongside a partner, we were tasked with designing and deploying a clean, accessible, and conversion-focused e-commerce platform to showcase and sell hearing aid devices online.
               </p>
-              <h3>Arabic Language & Literature</h3>
+
+              <h3>Features</h3>
               <p>
-              Arabic is the language of the Qurʾān, making it essential to study in depth. I have gained a strong understanding of <em>Naḥw</em> and <em>Ṣarf</em> (Arabic grammar) to the extent where I have been able to author books on these topics. I have also studied <em>Balāghah</em>, focusing on the Qurʾān’s linguistic beauty, eloquence, and rhetorical devices, and have even written a book on this as well.<br></br><a href="#">Click here</a> for more information about my books.
+              The store features a curated selection of devices from leading brands including <strong>Phonak</strong>, <strong>Signia</strong>, <strong>Oticon</strong>, <strong>ReSound</strong>, and <strong>Starkey</strong>. Each product page was designed for clarity, with structured layouts, pricing visibility, and straightforward navigation. We applied custom styling and interface refinements to enhance the overall user experience.
               </p>
-              <h3>Ḥadīth</h3>
+
+              <h3>Outcomes</h3>
               <p>
-              As part of our Ḥadīth studies, we have covered collections such as <em>Arbaʿūna Ḥadīthan</em> and <em>Riyāḍ-uṣ-Ṣāliḥīn</em>, which offer profound insight into the wisdom, character, lifestyle, and intelligence of the Prophet Muḥammad (ﷺ).
-              </p>
-              <h3>Fiqh (Islamic Jurisprudence)</h3>
-              <p>
-              I have studied key legal texts including <em>Ascent to Felicity</em> and <em>Mukhtaṣar-ul-Qudūrī</em>, which have provided me with foundational knowledge in Islamic rulings and law.
-              </p>
-              <h3>History</h3>
-              <p>
-              Our curriculum has included works like <em>Qaṣaṣ-un-Nabiyyīn</em> and <em>Uṣūl-ush-Shāshī</em>, offering deep insight into the lives of the Prophets, their companions, and the righteous scholars of the past. These studies have helped shape my values and understanding of not only Islamic legacy, but traversing life itself.
+              This project strengthened my skills in frontend e-commerce development, client communication, and product-focused design under real-world business requirements. The site has not publicly been deployed as of yet, but above are some preview images.
               </p>
             </div>
           )}
 
           {activeSection === 'jml' && (
-            <div>
-              <h2>Partnered Project - Justmylook CSV Writer</h2>
-              <p>Certified in fire safety, risk assessment, and emergency response procedures to maintain workplace safety standards.</p>
+            <div className='description'>
+              <h2>Private Employer – Monetised Justmylook CSV File Writer</h2>
+              <p></p>
+              {/* Carousel */}
+              <div className="carousel-container">
+                <>
+                {loading && <div className="spinner">Loading...</div>}
+                <img
+                    src={jml[imageIndex]}
+                    alt={`Render ${imageIndex + 1}`}
+                    className="carousel-image"
+                    onLoad={() => setLoading(false)}
+                    style={{ display: loading ? 'none' : 'block' }}
+                />
+                </>
+                <button onClick={() => handlePrev(jml)} className="carousel-btn prev-btn">‹</button>
+                <button onClick={() => handleNext(jml)} className="carousel-btn next-btn">›</button>
+              </div>
+              <h3>Overview</h3>
+              <p>
+              This project involved developing a fully automated backend system for a dropshipping business, in collaboration with a colleague who now works as a Senior Sales Development Representative at Stack Overflow. The solution was designed to streamline the sourcing and listing of products across third-party marketplaces, with a focus on data accuracy, efficiency, and scalability.
+              </p>
+
+              <h3>Features</h3>
+              <p>
+              The pipeline began with intelligent web crawling, starting from "view all" catalog pages to identify and collect product URLs. From there, we implemented targeted web scraping to extract detailed product data including titles, descriptions, pricing, images, and stock levels. All data was cleaned and structured before being converted into properly formatted <strong>CSV files</strong> for bulk upload.
+              </p>
+
+              <h3>These CSVs served two main functions:</h3>
+              <ul>
+                <li><strong>Product Creation:</strong> Automating the listing process on eBay with accurate metadata and imagery.</li>
+                <li><strong>Stock & Price Updates:</strong> Generating regularly updated CSVs to reflect real-time inventory and pricing changes for continued profitability.</li>
+              </ul>
+
+              <h3>Outcomes</h3>
+              <p>
+              This system enabled the business to operate with minimal manual input, significantly reducing overhead while rapidly scaling product listings. The solution proved to be monetisable, successfully generating revenue through automated product reselling. The project demonstrated my ability to build efficient data pipelines, implement robust custom web scrapers with close attention to site structure, and interface effectively with marketplace upload standards in a commercially-driven environment. The full source code is available on <a href="https://github.com/usmaan275/Justmylook-CSV-Writer" target="_blank">github.com/usmaan275/Justmylook-CSV-Writer</a>.
+              </p>
+
             </div>
           )}
         </div>
