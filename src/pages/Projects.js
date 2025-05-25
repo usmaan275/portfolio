@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import '../App.css'; // If you're using external styles
 import { useNavigate } from 'react-router-dom';
 
@@ -6,6 +6,7 @@ function Projects() {
   const navigate = useNavigate();
   const [activeSection, setActiveSection] = useState('');
   const mainContentRef = useRef(null);
+  const [loading, setLoading] = useState(true);
 
   const scrollToTop = () => {
     if (mainContentRef.current) {
@@ -14,8 +15,9 @@ function Projects() {
   };
 
   const importAll = (r) => r.keys().map(r);
-  const computerGraphics = importAll(require.context('../imageCarousel/computerGraphics', false, /\.(png|jpe?g|svg|gif|mp4)$/));
-  
+  const computerGraphics = importAll(require.context('../imageCarousel/computerGraphics', false, /\.(png|mp4)$/));
+  const imageProcessing = importAll(require.context('../imageCarousel/imageProcessing', false, /\.(png)$/));
+
   const [imageIndex, setImageIndex] = useState(0);
   const resetImageIndex = () => {
     setImageIndex(0);
@@ -26,6 +28,10 @@ function Projects() {
   const handlePrev = (imagesArray) => {
     setImageIndex((prev) => (prev - 1 + imagesArray.length) % imagesArray.length);
   };
+
+  useEffect(() => {
+    setLoading(true); // Reset when imageIndex or activeSection changes
+  }, [imageIndex, activeSection]);
 
   return (
     <div className="education-container">
@@ -58,7 +64,7 @@ function Projects() {
             <div className='description'>
               <h2>Portfolio Website</h2>
               <p>
-                I developed my personal portfolio using React. This project serves as a central platform to showcase my work, skills, and accomplishments across both academic and personal projects. Through this and other ventures, I’ve accumulated substantial programming experience, applying what I’ve learned in university and beyond to real-world scenarios. Here are some of the key projects I’ve worked on.
+                I developed my personal portfolio using React. This project serves as a central platform to showcase my work, skills, and accomplishments across both academic and personal projects. Through this and other ventures, I’ve accumulated substantial programming experience, applying what I’ve learned in university and beyond to real-world scenarios. Check out some of the key projects I’ve worked on.
               </p>
             </div>
           )}
@@ -72,6 +78,8 @@ function Projects() {
                 {computerGraphics.map((file, idx) =>
                   idx === imageIndex ? (
                     file.endsWith('.mp4') ? (
+                      <>
+                      {loading && <div className="spinner">Loading...</div>}
                       <video
                         key={idx}
                         src={file}
@@ -80,14 +88,22 @@ function Projects() {
                         loop
                         muted
                         playsInline
+                        onLoadedData={() => setLoading(false)}
+                        style={{ display: loading ? 'none' : 'block' }}
                       />
+                      </>
                     ) : (
+                      <>
+                      {loading && <div className="spinner">Loading...</div>}
                       <img
                         key={idx}
                         src={file}
                         alt={`Slide ${idx+1}`}
                         className="carousel-image"
+                        onLoad={() => setLoading(false)}
+                        style={{ display: loading ? 'none' : 'block' }}
                       />
+                      </>
                     )
                   ) : null
                 )}
@@ -102,6 +118,7 @@ function Projects() {
                 Key features implemented in this project include:
                 </h3>
                 <ul>
+                <li>GLSL used for vertex and fragment shaders, with the rest of the application built in JavaScript</li>
                 <li>Vertex indexing and interleaved vertex attributes</li>
                 <li>Projective transformations and matrix-based rotation techniques</li>
                 <li>Phong shading and various lighting models</li>
@@ -121,18 +138,77 @@ function Projects() {
 
         {activeSection === 'image' && (
             <div className='description'>
-              <h2>Java Image Processor</h2>
+              <h2>Java Image Processing Toolkit</h2>
               <p></p>
               {/* Carousel */}
               <div className="carousel-container">
+                <>
+                {loading && <div className="spinner">Loading...</div>}
                 <img
-                    src={computerGraphics[imageIndex]}
+                    src={imageProcessing[imageIndex]}
                     alt={`Render ${imageIndex + 1}`}
                     className="carousel-image"
+                    onLoad={() => setLoading(false)}
+                    style={{ display: loading ? 'none' : 'block' }}
                 />
-                <button onClick={() => handlePrev(computerGraphics)} className="carousel-btn prev-btn">‹</button>
-                <button onClick={() => handleNext(computerGraphics)} className="carousel-btn next-btn">›</button>
+                </>
+                <button onClick={() => handlePrev(imageProcessing)} className="carousel-btn prev-btn">‹</button>
+                <button onClick={() => handleNext(imageProcessing)} className="carousel-btn next-btn">›</button>
               </div>
+              <h3>Overview</h3>
+              <p>
+              This project is a Java-based image processing toolkit that showcases a broad range of both fundamental and advanced image manipulation techniques. Built as part of a practical exploration into image analysis and enhancement, the application enables experimentation with pixel-level transformations, arithmetic and logical operations, and filtering methods commonly used in digital image processing.
+              </p>
+
+              <h3>Key features of this toolkit include:</h3>
+              <ul>
+                <li>Original image display and basic visualisation</li>
+                <li>Negative transformation</li>
+                <li>Image rescaling and shifting</li>
+                <li>Combined shift and rescale operations</li>
+                <li>Arithmetic operations:
+                  <ul>
+                    <li>Add</li>
+                    <li>Subtract</li>
+                    <li>Multiply</li>
+                    <li>Divide</li>
+                  </ul>
+                </li>
+                <li>Bitwise operations:
+                  <ul>
+                    <li>NOT</li>
+                    <li>AND</li>
+                    <li>OR</li>
+                    <li>XOR</li>
+                  </ul>
+                </li>
+                <li>Region of Interest (ROI) operations:
+                  <ul>
+                    <li>ROI AND</li>
+                    <li>ROI Multiply</li>
+                  </ul>
+                </li>
+                <li>Logarithmic and power-law (gamma) transformations</li>
+                <li>Random Look-Up Table (LUT) generation</li>
+                <li>Bit-plane slicing</li>
+                <li>Histogram computation and analysis</li>
+                <li>Convolution filtering</li>
+                <li>Salt & pepper noise addition</li>
+                <li>Filtering techniques:
+                  <ul>
+                    <li>Min filter</li>
+                    <li>Max filter</li>
+                    <li>Midpoint filter</li>
+                    <li>Median filter</li>
+                  </ul>
+                </li>
+                <li>Thresholding and auto-thresholding techniques</li>
+              </ul>
+              <h3>Outcomes</h3>
+              <p>
+              This project helped me strengthen my understanding of core image processing algorithms and provided practical experience in implementing them efficiently using Java. It was also a great opportunity to explore how theoretical methods from my coursework apply to real-world data. You can view the full source code and documentation on my GitHub: <a href="https://github.com/usmaan275/Image-Processing" target="_blank">github.com/usmaan275/Image-Processing</a>.
+              </p>
+
             </div>
           )}
 
