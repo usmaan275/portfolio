@@ -15,12 +15,12 @@ function Projects() {
   };
 
   const importAll = (r) => r.keys().map(r);
-  const computerGraphics = importAll(require.context('../imageCarousel/computerGraphics', false, /\.(png|mp4)$/));
-  const imageProcessing = importAll(require.context('../imageCarousel/imageProcessing', false, /\.(png)$/));
-  const quranquiz = importAll(require.context('../imageCarousel/quranquiz', false, /\.(png)$/));
-  const staffsync = importAll(require.context('../imageCarousel/staffsync', false, /\.(png)$/));
-  const hearing = importAll(require.context('../imageCarousel/hearing', false, /\.(png)$/));
-  const jml = importAll(require.context('../imageCarousel/jml', false, /\.(png)$/));
+  const computerGraphics = importAll(require.context('../imageCarousel/projects/computerGraphics', false, /\.(png|mp4)$/));
+  const imageProcessing = importAll(require.context('../imageCarousel/projects/imageProcessing', false, /\.(png)$/));
+  const quranquiz = importAll(require.context('../imageCarousel/projects/quranquiz', false, /\.(png)$/));
+  const staffsync = importAll(require.context('../imageCarousel/projects/staffsync', false, /\.(png)$/));
+  const hearing = importAll(require.context('../imageCarousel/projects/hearing', false, /\.(png)$/));
+  const jml = importAll(require.context('../imageCarousel/projects/jml', false, /\.(png)$/));
 
   const [imageIndex, setImageIndex] = useState(0);
   const resetImageIndex = () => {
@@ -349,7 +349,7 @@ function Projects() {
 
           {activeSection === 'jml' && (
             <div className='description'>
-              <h2>Private Employer – Monetised Justmylook CSV File Writer</h2>
+              <h2>Private Employer — Monetised Justmylook CSV File Writer</h2>
               <p></p>
               {/* Carousel */}
               <div className="carousel-container">

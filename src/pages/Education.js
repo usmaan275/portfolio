@@ -133,7 +133,7 @@ function Education() {
               </p>
               <h3>Application Inspiriation</h3>
               <p>
-              By the age of 21, I developed an application designed to support individuals looking to strengthen their memorisation of the Qurʾān.<br></br><Link to="/projects">Click here</Link> for more information about my projects.
+              By the age of 21, I developed an application designed to support individuals looking to strengthen their memorisation of the Qurʾān.<br /><Link to="/projects">Click here</Link> for more information about my projects.
               </p>
             </div>
           )}
@@ -165,7 +165,7 @@ function Education() {
               </p>
               <h3>Arabic Language & Literature</h3>
               <p>
-              Arabic is the language of the Qurʾān, making it essential to study in depth. I have gained a strong understanding of <em>Naḥw</em> and <em>Ṣarf</em> (Arabic grammar) to the extent where I have been able to author books on these topics. I have also studied <em>Balāghah</em>, focusing on the Qurʾān’s linguistic beauty, eloquence, and rhetorical devices, and have even written a book on this as well.<br></br><Link to="/books">Click here</Link> for more information about my books.
+              Arabic is the language of the Qurʾān, making it essential to study in depth. I have gained a strong understanding of <em>Naḥw</em> and <em>Ṣarf</em> (Arabic grammar) to the extent where I have been able to author books on these topics. I have also studied <em>Balāghah</em>, focusing on the Qurʾān’s linguistic beauty, eloquence, and rhetorical devices, and have even written a book on this as well.<br /><Link to="/books">Click here</Link> for more information about my books.
               </p>
               <h3>Ḥadīth</h3>
               <p>

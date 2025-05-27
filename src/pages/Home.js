@@ -63,7 +63,7 @@ function Home() {
             <div className="glow-card" onClick={() => navigate('/projects')}>Projects</div>
           </div>
           <div className='glow-wrapper'>
-            <div className="glow-card">Books</div>
+            <div className="glow-card" onClick={() => navigate('/books')}>Books</div>
           </div>
           <div className='glow-wrapper'>
             <div className="glow-card">Experience</div>
