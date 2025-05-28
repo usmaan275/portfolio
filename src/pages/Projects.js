@@ -79,6 +79,7 @@ function Projects() {
               <p></p>
               {/* Carousel */}
               <div className="carousel-container">
+                <h4>Slide {imageIndex + 1}/{computerGraphics.length}</h4>
                 {computerGraphics.map((file, idx) =>
                   idx === imageIndex ? (
                     file.endsWith('.mp4') ? (
@@ -146,6 +147,7 @@ function Projects() {
               <p></p>
               {/* Carousel */}
               <div className="carousel-container">
+                <h4>Slide {imageIndex + 1}/{imageProcessing.length}</h4>
                 <>
                 {loading && <div className="spinner">Loading...</div>}
                 <img
@@ -222,6 +224,7 @@ function Projects() {
               <p></p>
               {/* Carousel */}
               <div className="carousel-container">
+                <h4>Slide {imageIndex + 1}/{quranquiz.length}</h4>
                 <>
                 {loading && <div className="spinner">Loading...</div>}
                 <img
@@ -270,6 +273,7 @@ function Projects() {
               <p></p>
               {/* Carousel */}
               <div className="carousel-container">
+                <h4>Slide {imageIndex + 1}/{staffsync.length}</h4>
                 <>
                 {loading && <div className="spinner">Loading...</div>}
                 <img
@@ -317,6 +321,7 @@ function Projects() {
               <p></p>
               {/* Carousel */}
               <div className="carousel-container">
+                <h4>Slide {imageIndex + 1}/{hearing.length}</h4>
                 <>
                 {loading && <div className="spinner">Loading...</div>}
                 <img
@@ -353,6 +358,7 @@ function Projects() {
               <p></p>
               {/* Carousel */}
               <div className="carousel-container">
+                <h4>Slide {imageIndex + 1}/{jml.length}</h4>
                 <>
                 {loading && <div className="spinner">Loading...</div>}
                 <img

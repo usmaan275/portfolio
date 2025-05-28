@@ -43,7 +43,7 @@ function Books() {
       <button className="back-button" onClick={() => navigate('/home')}>Back</button>
 
       {/* Title */}
-      <h1 className="education-title">Projects</h1>
+      <h1 className="education-title">Books</h1>
 
       <div className="education-layout">
         {/* Sidebar */}
@@ -75,10 +75,11 @@ function Books() {
               <h2>Verses of Admiration</h2>
               <h3>Overview</h3>
               <p>
-                I developed my personal portfolio using React. This project serves as a central platform to showcase my work, skills, and accomplishments across both academic and personal projects. Through this and other ventures, I’ve accumulated substantial programming experience, applying what I’ve learned in university and beyond to real-world scenarios. Check out some of the key projects I’ve worked on.
+              The full title of this work is <em>Āyāt-ul-Iʿjāb fil-Qurʾān-il-Ḥakīm</em> (Verses that Bring Admiration for the Qurʾān that is Full of Wisdom). This book explores the miraculous linguistic features of the Qurʾān, aiming to make its eloquence and literary depth accessible to an English-speaking audience.
               </p>
               {/* Carousel */}
               <div className="carousel-container">
+                <h4>Slide {imageIndex + 1}/{ijab.length}</h4>
                 <>
                 {loading && <div className="spinner">Loading...</div>}
                 <img
@@ -92,6 +93,10 @@ function Books() {
                 <button onClick={() => handlePrev(ijab)} className="carousel-btn prev-btn">‹</button>
                 <button onClick={() => handleNext(ijab)} className="carousel-btn next-btn">›</button>
               </div>
+              <h3>Developments</h3>
+              <p>
+              The inspiration behind this book was my desire to help others appreciate the linguistic marvel that the Qurʾān represents. What began as a personal summary soon evolved into a full text written in a style that even readers without prior knowledge of Arabic could follow and benefit from. After sharing early drafts with family and friends, I compiled the content into a complete book and have since released an unofficial version. It is currently under review by several individuals, and In-shāʾ-Allāh, it will be formally published soon.
+              </p>
             </div>
           )}
 
@@ -101,6 +106,7 @@ function Books() {
               <p></p>
               {/* Carousel */}
               <div className="carousel-container">
+                <h4>Slide {imageIndex + 1}/{imageProcessing.length}</h4>
                 <>
                 {loading && <div className="spinner">Loading...</div>}
                 <img
