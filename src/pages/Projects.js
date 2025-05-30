@@ -144,7 +144,7 @@ function Projects() {
                 </ul>
                 <h3>Outcomes</h3>
                 <p>
-                This project deepened my understanding of both the low-level mechanics and creative possibilities of 3D rendering pipelines. You can view the full source code and documentation on my GitHub: <a href="https://github.com/usmaan275/Computer-Graphics" target="_blank">github.com/usmaan275/Computer-Graphics</a>.
+                This project deepened my understanding of both the low-level mechanics and creative possibilities of 3D rendering pipelines. You can view the full source code and documentation on my GitHub: <a href="https://github.com/usmaan275/Computer-Graphics" target="_blank" rel="noreferrer">github.com/usmaan275/Computer-Graphics</a>.
                 </p>
             </div>
           )}
@@ -220,7 +220,7 @@ function Projects() {
               </ul>
               <h3>Outcomes</h3>
               <p>
-              This project helped me strengthen my understanding of core image processing algorithms and provided practical experience in implementing them efficiently using Java. It was also a great opportunity to explore how theoretical methods from my coursework apply to real-world data. You can view the full source code and documentation on my GitHub: <a href="https://github.com/usmaan275/Image-Processing" target="_blank">github.com/usmaan275/Image-Processing</a>.
+              This project helped me strengthen my understanding of core image processing algorithms and provided practical experience in implementing them efficiently using Java. It was also a great opportunity to explore how theoretical methods from my coursework apply to real-world data. You can view the full source code and documentation on my GitHub: <a href="https://github.com/usmaan275/Image-Processing" target="_blank" rel="noreferrer">github.com/usmaan275/Image-Processing</a>.
               </p>
 
             </div>
@@ -248,7 +248,7 @@ function Projects() {
               </div>
               <h3>Overview</h3>
               <p>
-              This project was my final year university project. I developed it myself whilst being sponsored by <a href="https://qubaacademy.co.uk/" target="_blank">Quba Academy</a>. It’s a gamified web application designed to assist with Quran memorisation (Hifdh) through interactive modes and user-friendly design. The app is now officially live at <a href="https://qubaquranquiz.vercel.app" target="_blank">qubaquranquiz.vercel.app</a> and is being integrated into the Quba Academy website.
+              This project was my final year university project. I developed it myself whilst being sponsored by <a href="https://qubaacademy.co.uk/" target="_blank" rel="noreferrer">Quba Academy</a>. It’s a gamified web application designed to assist with Quran memorisation (Hifdh) through interactive modes and user-friendly design. The app is now officially live at <a href="https://qubaquranquiz.vercel.app" target="_blank" rel="noreferrer">qubaquranquiz.vercel.app</a> and is being integrated into the Quba Academy website.
               </p>
 
               <h3>Key Features</h3>
@@ -269,7 +269,7 @@ function Projects() {
 
               <h3>Testing & Outcomes</h3>
               <p>
-              Built with real-time feedback from Quran memorisers and Islamic educators, such as; Shaykh Haitham al-Haddad, Shaykh Abdul Majid, etc., the app blends modern web development with classical learning needs. It offers Arabic and English memorisation tools, a custom-themed Hangman game, and a multiple-choice quiz, all designed with performance, usability, and engagement in mind. The application went through iterative user testing to refine gameplay balance, interface clarity, and memorisation difficulty. Feedback from active memorizers helped shape final release features. This project solidified my ability to design accessible educational tools with real-world impact and collaboration. Of course, the app is now officially deployed and the source code is also available on <a href="https://github.com/usmaan275/Quran-Quiz" target="_blank">github.com/usmaan275/Quran-Quiz</a>.
+              Built with real-time feedback from Quran memorisers and Islamic educators, such as; Shaykh Haitham al-Haddad, Shaykh Abdul Majid, etc., the app blends modern web development with classical learning needs. It offers Arabic and English memorisation tools, a custom-themed Hangman game, and a multiple-choice quiz, all designed with performance, usability, and engagement in mind. The application went through iterative user testing to refine gameplay balance, interface clarity, and memorisation difficulty. Feedback from active memorizers helped shape final release features. This project solidified my ability to design accessible educational tools with real-world impact and collaboration. Of course, the app is now officially deployed and the source code is also available on <a href="https://github.com/usmaan275/Quran-Quiz" target="_blank" rel="noreferrer">github.com/usmaan275/Quran-Quiz</a>.
               </p>
 
             </div>
@@ -317,7 +317,7 @@ function Projects() {
 
               <h3>Outcomes</h3>
               <p>
-              Our team was awarded <strong>Best Design</strong> across all participating groups, recognising our clean interface, thoughtful user experience, and consistent branding throughout the application. View the full source code on <a href="https://github.com/usmaan275/staffsync" target="_blank">github.com/usmaan275/staffsync</a>.
+              Our team was awarded <strong>Best Design</strong> across all participating groups, recognising our clean interface, thoughtful user experience, and consistent branding throughout the application. View the full source code on <a href="https://github.com/usmaan275/staffsync" target="_blank" rel="noreferrer">github.com/usmaan275/staffsync</a>.
               </p>
 
             </div>
@@ -398,7 +398,7 @@ function Projects() {
 
               <h3>Outcomes</h3>
               <p>
-              This system enabled the business to operate with minimal manual input, significantly reducing overhead while rapidly scaling product listings. The solution proved to be monetisable, successfully generating revenue through automated product reselling. The project demonstrated my ability to build efficient data pipelines, implement robust custom web scrapers with close attention to site structure, and interface effectively with marketplace upload standards in a commercially-driven environment. The full source code is available on <a href="https://github.com/usmaan275/Justmylook-CSV-Writer" target="_blank">github.com/usmaan275/Justmylook-CSV-Writer</a>.
+              This system enabled the business to operate with minimal manual input, significantly reducing overhead while rapidly scaling product listings. The solution proved to be monetisable, successfully generating revenue through automated product reselling. The project demonstrated my ability to build efficient data pipelines, implement robust custom web scrapers with close attention to site structure, and interface effectively with marketplace upload standards in a commercially-driven environment. The full source code is available on <a href="https://github.com/usmaan275/Justmylook-CSV-Writer" target="_blank" rel="noreferrer">github.com/usmaan275/Justmylook-CSV-Writer</a>.
               </p>
 
             </div>
