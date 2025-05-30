@@ -9,7 +9,7 @@ function Home() {
   const navigate = useNavigate();
   const [currentRoleIndex, setCurrentRoleIndex] = useState(0);
   const [fade, setFade] = useState(true);
-  const roles = ["Software Engineer", "Data Scientist", "AI Researcher", "Web Developer"];
+  const roles = ["Software Engineer", "Data Scientist", "AI Researcher", "Web Developer", "Quantitative Analyst"];
 
   const getIsPortrait = () => window.matchMedia("(orientation: portrait)").matches;
   const [isPortrait, setIsPortrait] = useState(getIsPortrait());
@@ -66,7 +66,7 @@ function Home() {
             <div className="glow-card" onClick={() => navigate('/books')}>Books</div>
           </div>
           <div className='glow-wrapper'>
-            <div className="glow-card">Experience</div>
+            <div className="glow-card" onClick={() => navigate('/experience')}>Experience</div>
           </div>
         </div>
       </div>

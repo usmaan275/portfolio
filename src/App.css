@@ -321,6 +321,23 @@ html, body {
   font-style: italic;
 }
 
+.project-list button {
+  background: none;
+  border: none;
+  font-family: "Amiri";
+  font-size: 1em;
+  color: #070a41;
+  text-align: left;
+  cursor: pointer;
+  padding: 0.7dvh;
+  transition: color 0.2s ease;
+}
+
+.project-list button:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}
+
 .carousel-container {
   background:rgba(0, 0, 0, 0.2);
   position: relative;

@@ -4,6 +4,7 @@ import Home from './pages/Home';
 import Education from './pages/Education';
 import Projects from './pages/Projects';
 import Books from './pages/Books';
+import Experience from './pages/Experience';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
           <Route path="/education" element ={<Education/>}/>
           <Route path="/projects" element ={<Projects/>}/>
           <Route path="/books" element ={<Books/>}/>
+          <Route path="/experience" element ={<Experience/>}/>
         </Routes>
       </BrowserRouter>
     </div>

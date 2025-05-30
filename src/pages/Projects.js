@@ -70,6 +70,14 @@ function Projects() {
               <p>
                 I developed my personal portfolio using React. This project serves as a central platform to showcase my work, skills, and accomplishments across both academic and personal projects. Through this and other ventures, I’ve accumulated substantial programming experience, applying what I’ve learned in university and beyond to real-world scenarios. Check out some of the key projects I’ve worked on.
               </p>
+              <ul className="project-list">
+                <li><button onClick={() => { setActiveSection('graphics'); scrollToTop(); resetImageIndex(); }}>WebGL 3D Image Generator</button></li>
+                <li><button onClick={() => { setActiveSection('image'); scrollToTop(); resetImageIndex(); }}>Java Image Processing Toolkit</button></li>
+                <li><button onClick={() => { setActiveSection('quranquiz'); scrollToTop(); resetImageIndex(); }}>Quran Quiz App</button></li>
+                <li><button onClick={() => { setActiveSection('staffsync'); scrollToTop(); resetImageIndex(); }}>StaffSync Employee Portal</button></li>
+                <li><button onClick={() => { setActiveSection('hearing'); scrollToTop(); resetImageIndex(); }}>ValueHearing Online Hearing Aids Store</button></li>
+                <li><button onClick={() => { setActiveSection('jml'); scrollToTop(); resetImageIndex(); }}>Justmylook CSV File Writer</button></li>
+              </ul>
             </div>
           )}
 
