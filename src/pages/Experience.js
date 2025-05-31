@@ -41,7 +41,7 @@ function Experience() {
 
           {activeSection === 'quba' && (
             <div className='description'>
-              <h2>App Development (Quba Academy)</h2>
+              <h2>App Developer — Quba Academy</h2>
               <h3>Overview</h3>
                 <p>
                 As part of a year-long university project sponsored by <strong>Quba Academy</strong>, I was contracted to design and develop a fully functional web application to support Qurʾān memorisation. This experience provided invaluable insight into building a product from initial concept to deployment, while actively engaging with real-world clients and stakeholders. This was just one of my many projects. <br /><Link to="/projects">Click here</Link> for more information about my projects.
@@ -55,7 +55,7 @@ function Experience() {
 
           {activeSection === 'web' && (
             <div className='description'>
-              <h2>Web Development (ValueHearing & FDM Ltd)</h2>
+              <h2>Web Developer — ValueHearing & FDM Ltd</h2>
               <h3>Overview</h3>
                 <p>
                 Myself and a partner were contracted to design and develop an online storefront for <strong>ValueHearing</strong>, a company specialising in high-quality hearing aids. We were entrusted with the full site build — from layout planning and custom styling to deployment — to create a professional, responsive, and user-friendly experience for customers browsing products from brands like Phonak, Signia, Oticon, Resound, and Starkey. I also partook in a university group project to create an employee portal web app called StaffSync for <strong>FDM Ltd</strong>. Again, these are just a couple of my projects.<br /><Link to="/projects">Click here</Link> for more information about my projects.
@@ -69,7 +69,7 @@ function Experience() {
 
           {activeSection === 'tick' && (
             <div className='description'>
-              <h2>School Teaching (Tick Education)</h2>
+              <h2>School Teacher — Tick Education</h2>
               <h3>Overview</h3>
                 <p>
                 I have worked with <strong>Tick Education</strong>, a recruitment agency specialising in placing staff in both primary and secondary schools across Bedfordshire and beyond. Through this role, I have taught in a variety of educational settings, delivering lessons across multiple subjects and age groups while supporting both academic and behavioural development.
@@ -83,7 +83,7 @@ function Experience() {
 
           {activeSection === 'tutor' && (
             <div className='description'>
-              <h2>Tutoring (MyTutor & MedicHut)</h2>
+              <h2>Tutor — MyTutor & MedicHut</h2>
                 <h3>Overview</h3>
                 <p>
                 I began tutoring with <strong>MyTutor</strong>, initially applying as a subject specialist and gradually building a reputation through positive student outcomes and consistent feedback. Over time, I became one of their highly rated tutors, working with a range of students from diverse academic backgrounds. Separately, I was offered a position at <strong>MedicHut</strong> without even applying — based purely on referrals and the strength of my teaching presence. I conducted sessions across various subjects such as Maths, Computer Science, Mechanics, and more.
@@ -98,7 +98,7 @@ function Experience() {
 
           {activeSection === 'priv' && (
             <div className='description'>
-              <h2>Private Teaching (Masjid Noor Luton)</h2>
+              <h2>Private Teacher — Masjid Noor Luton</h2>
                 <h3>Overview</h3>
                 <p>
                 I have been teaching at <strong>Masjid Noor Luton</strong>, a private Islamic educational institute dedicated to providing foundational Islamic knowledge to students aged 6–16. My role includes teaching Qurʾān recitation, Islamic etiquettes, and basic theology in a structured and age-appropriate manner. This role has been a consistent part of my weekly schedule and required careful balancing alongside my other professional, academic, and personal commitments.
@@ -113,7 +113,7 @@ function Experience() {
 
           {activeSection === 'admin' && (
             <div className='description'>
-                <h2>Administration Assistant (Masjid Noor Luton)</h2>
+                <h2>Administration Assistant — Masjid Noor Luton</h2>
                 <h3>Overview</h3>
                 <p>
                 Alongside my teaching role, I also serve as an administrative assistant at <strong>Masjid Noor Luton</strong>. This position involves handling key organisational tasks such as managing student fee records, maintaining attendance sheets, generating reports, and supporting broader administrative functions within the institute. It is a role that supports the operational backbone of the mosque's day-to-day functioning.
