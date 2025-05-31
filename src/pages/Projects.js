@@ -271,7 +271,7 @@ function Projects() {
               </div>
               <h3>Overview</h3>
               <p>
-              This project was my final year university project. I developed it myself whilst being sponsored by <a href="https://qubaacademy.co.uk/" target="_blank">Quba Academy</a>. It’s a gamified web application designed to assist with Quran memorisation (Hifdh) through interactive modes and user-friendly design. The app is now officially live at <a href="https://qubaquranquiz.vercel.app" target="_blank">qubaquranquiz.vercel.app</a> and is being integrated into the Quba Academy website.
+              This project was my final year university project. I developed it myself whilst being sponsored by <a href="https://qubaacademy.co.uk/" target="_blank">Quba Academy</a>. It’s a gamified web application designed to assist with Quran memorisation (Hifdh) through interactive modes and user-friendly design. The app is now officially live at <a href="https://qubaquranquiz.vercel.app" target="_blank">qubaquranquiz.vercel.app</a> and has now been integrated into the Quba Academy website.
               </p>
 
               <h3>Key Features</h3>
