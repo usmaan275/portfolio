@@ -138,7 +138,7 @@ function Books() {
               <h2>Contextual Connections</h2>
               <h3>Overview</h3>
               <p>
-              The full title of this work is <em>Mukhtaṣar bayna Khawātīm-is-Suwar wa Fawātiḥi mā Talīhā</em> (A Concise Commentary on the Contextual Connections Between the Closing Statements of Sūrahs and Opening Statements of the Next). This book investigates the structural and thematic coherence of the Qurʾān by analysing how the ending of one Sūrah seamlessly transitions into the beginning of the next. It aims to highlight the divine linearity and interconnectedness embedded within the Qurʾānic structure—revealing not only its eloquence but also the unity of its message.
+              The full title of this work is <em>Mukhtaṣar-ut-Tanāsuq bayna Khawātīm-is-Suwar wa Fawātiḥi mā Talīhā</em> (A Concise Commentary on the Contextual Connections Between the Closing Statements of Sūrahs and Opening Statements of the Next). This book investigates the structural and thematic coherence of the Qurʾān by analysing how the ending of one Sūrah seamlessly transitions into the beginning of the next. It aims to highlight the divine linearity and interconnectedness embedded within the Qurʾānic structure—revealing not only its eloquence but also the unity of its message.
               </p>
               {/* Carousel */}
               <div className="carousel-container">
