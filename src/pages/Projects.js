@@ -79,7 +79,7 @@ function Projects() {
           <h3>Client Projects</h3>
           <button onClick={() => {setActiveSection('quranquiz'); scrollToTop(); resetImageIndex();}} className={activeSection === 'quranquiz' ? 'active' : ''}>Quran Quiz</button>
           <button onClick={() => {setActiveSection('staffsync'); scrollToTop(); resetImageIndex();}} className={activeSection === 'staffsync' ? 'active' : ''}>StaffSync</button>
-          <button onClick={() => {setActiveSection('hearing'); scrollToTop(); resetImageIndex();}} className={activeSection === 'hearing' ? 'active' : ''}>ValueHearing</button>
+          <button onClick={() => {setActiveSection('hearing'); scrollToTop(); resetImageIndex();}} className={activeSection === 'hearing' ? 'active' : ''}>Online Store</button>
           <button onClick={() => {setActiveSection('jml'); scrollToTop(); resetImageIndex();}} className={activeSection === 'jml' ? 'active' : ''}>CSV Writer</button>
         </div>
 
@@ -96,10 +96,10 @@ function Projects() {
               <ul className="project-list">
                 <li><button onClick={() => { setActiveSection('graphics'); scrollToTop(); resetImageIndex(); }}>WebGL 3D Image Generator</button></li>
                 <li><button onClick={() => { setActiveSection('image'); scrollToTop(); resetImageIndex(); }}>Java Image Processing Toolkit</button></li>
-                <li><button onClick={() => { setActiveSection('quranquiz'); scrollToTop(); resetImageIndex(); }}>Quran Quiz App</button></li>
-                <li><button onClick={() => { setActiveSection('staffsync'); scrollToTop(); resetImageIndex(); }}>StaffSync Employee Portal</button></li>
-                <li><button onClick={() => { setActiveSection('hearing'); scrollToTop(); resetImageIndex(); }}>ValueHearing Online Hearing Aids Store</button></li>
-                <li><button onClick={() => { setActiveSection('jml'); scrollToTop(); resetImageIndex(); }}>Justmylook CSV File Writer</button></li>
+                <li><button onClick={() => { setActiveSection('quranquiz'); scrollToTop(); resetImageIndex(); }}>Quran Quiz App for Quba Academy</button></li>
+                <li><button onClick={() => { setActiveSection('staffsync'); scrollToTop(); resetImageIndex(); }}>StaffSync Employee Portal for FDM Ltd</button></li>
+                <li><button onClick={() => { setActiveSection('hearing'); scrollToTop(); resetImageIndex(); }}>Online Hearing Aids Store for ValueHearing</button></li>
+                <li><button onClick={() => { setActiveSection('jml'); scrollToTop(); resetImageIndex(); }}>Justmylook CSV File Writer for a Private Employer</button></li>
               </ul>
             </div>
           )}

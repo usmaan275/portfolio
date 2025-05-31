@@ -54,7 +54,7 @@ html, body {
     rgba(0, 123, 255, 0.3),
     #00f0ff
   );
-  animation: spin 3s linear infinite;
+  animation: spin 2s linear infinite;
   z-index: 0;
 }
 
@@ -170,7 +170,7 @@ html, body {
     rgba(0, 123, 255, 0.3),
     #00f0ff
   );
-  animation: spin 3s linear infinite;
+  animation: spin 2s linear infinite;
   z-index: 0;
   cursor: pointer;
 
