@@ -36,6 +36,35 @@ function Books() {
     setImageIndex((prev) => (prev - 1 + imagesArray.length) % imagesArray.length);
   };
 
+  const preloadImages = (images) => {
+    images.forEach((src) => {
+      const img = new Image();
+      img.src = src;
+    });
+  };
+
+  useEffect(() => {
+    if (activeSection === 'ijab') {
+      preloadImages(ijab);
+    } else if (activeSection === 'onomastics') {
+      preloadImages(onomastics);
+    } else if (activeSection === 'tanasuq') {
+      preloadImages(tanasuq);
+    } else if (activeSection === 'nahw') {
+      preloadImages(nahw);
+    } else if (activeSection === 'sarf') {
+      preloadImages(sarf);
+    } else if (activeSection === 'hidayatunnahw') {
+      preloadImages(hidayatunnahw);
+    } else if (activeSection === 'quduri') {
+      preloadImages(quduri);
+    } else if (activeSection === 'shashi') {
+      preloadImages(shashi);
+    } else if (activeSection === 'qasas') {
+      preloadImages(qasas);
+    }
+  }, [activeSection]);  
+
   useEffect(() => {
     setLoading(true); // Reset when imageIndex or activeSection changes
   }, [imageIndex, activeSection]);
@@ -59,7 +88,7 @@ function Books() {
           <h3>Arabic Grammar</h3>
           <button onClick={() => {setActiveSection('nahw'); scrollToTop(); resetImageIndex();}} className={activeSection === 'nahw' ? 'active' : ''}>Rules</button>
           <button onClick={() => {setActiveSection('sarf'); scrollToTop(); resetImageIndex();}} className={activeSection === 'sarf' ? 'active' : ''}>Morphology</button>
-          <button onClick={() => {setActiveSection('hidayatunnahw'); scrollToTop(); resetImageIndex();}} className={activeSection === 'hidayatunnahw' ? 'active' : ''}>Summary of Hidayat-un-Nahw</button>
+          <button onClick={() => {setActiveSection('hidayatunnahw'); scrollToTop(); resetImageIndex();}} className={activeSection === 'hidayatunnahw' ? 'active' : ''}>Summary of Hidāyat-un-Nahw</button>
 
           <h3>Islamic Jurisprudence</h3>
           <button onClick={() => {setActiveSection('quduri'); scrollToTop(); resetImageIndex();}} className={activeSection === 'quduri' ? 'active' : ''}>Glimpse of al-Qudūrī</button>

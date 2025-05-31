@@ -33,6 +33,29 @@ function Projects() {
     setImageIndex((prev) => (prev - 1 + imagesArray.length) % imagesArray.length);
   };
 
+  const preloadImages = (images) => {
+    images.forEach((src) => {
+      const img = new Image();
+      img.src = src;
+    });
+  };
+
+  useEffect(() => {
+    if (activeSection === 'graphics') {
+      preloadImages(computerGraphics);
+    } else if (activeSection === 'image') {
+      preloadImages(imageProcessing);
+    } else if (activeSection === 'quranquiz') {
+      preloadImages(quranquiz);
+    } else if (activeSection === 'staffsync') {
+      preloadImages(staffsync);
+    } else if (activeSection === 'hearing') {
+      preloadImages(hearing);
+    } else if (activeSection === 'jml') {
+      preloadImages(jml);
+    }
+  }, [activeSection]);  
+
   useEffect(() => {
     setLoading(true); // Reset when imageIndex or activeSection changes
   }, [imageIndex, activeSection]);
