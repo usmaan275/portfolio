@@ -91,7 +91,7 @@ function Projects() {
             <div className='description'>
               <h2>Portfolio Website</h2>
               <p>
-                I developed my personal portfolio using React. This project serves as a central platform to showcase my work, skills, and accomplishments across both academic and personal projects. Through this and other ventures, I’ve accumulated substantial programming experience, applying what I’ve learned in university and beyond to real-world scenarios. Check out some of the key projects I’ve worked on.
+                I developed my personal portfolio using React. You can view the full source code and documentation on my GitHub: <a href="https://github.com/usmaan275/portfolio" target="_blank">github.com/usmaan275/portfolio</a>. This project serves as a central platform to showcase my work, skills, and accomplishments across both academic and personal projects. Through this and other ventures, I’ve accumulated substantial programming experience, applying what I’ve learned in university and beyond to real-world scenarios. Check out some of the key projects I’ve worked on.
               </p>
               <ul className="project-list">
                 <li><button onClick={() => { setActiveSection('graphics'); scrollToTop(); resetImageIndex(); }}>WebGL 3D Image Generator</button></li>
