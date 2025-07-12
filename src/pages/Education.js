@@ -70,14 +70,14 @@ function Education() {
 
           {activeSection === 'uni' && (
             <div className='description'>
-              <h2>Queen Mary's University of London</h2>
+              <h2>Queen Mary University of London</h2>
               <h3>Programme</h3>
               <p>BSc (Hons) Computer Science and Mathematics</p>
               <h3>Grade</h3>
               <p>First Class Honours</p>
               <h3>Summary</h3>
               <p>
-              I attended Queen Mary's University of London, where I pursued a Bachelors degree with Honours in Computer Science and Mathematics, a joint honours degree. I've learnt a lot throughout this journey. From the wide range of modules I studied, I’ve gained skills in problem-solving, programming, data analysis, mathematical reasoning, algorithm design, software development and much more.
+              I attended Queen Mary University of London, where I pursued a Bachelors degree with Honours in Computer Science and Mathematics, a joint honours degree. I've learnt a lot throughout this journey. From the wide range of modules I studied, I’ve gained skills in problem-solving, programming, data analysis, mathematical reasoning, algorithm design, software development and much more.
               </p>
 
               <h3>Year 1 Modules (Averaged 85%)</h3>
