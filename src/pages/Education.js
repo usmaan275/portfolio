@@ -70,17 +70,17 @@ function Education() {
 
           {activeSection === 'uni' && (
             <div className='description'>
-              <h2>University</h2>
-              <h3>Queen Mary's University of London</h3>
+              <h2>Queen Mary's University of London</h2>
+              <h3>Programme</h3>
+              <p>BSc (Hons) Computer Science and Mathematics</p>
+              <h3>Grade</h3>
+              <p>First Class Honours</p>
+              <h3>Summary</h3>
               <p>
-              I attended Queen Mary's University of London, where I pursued a <strong>BSc (Hons) in Computer Science and Mathematics — a joint honours degree.</strong> I've learnt a lot throughout this journey. From the wide range of modules I studied, I’ve gained skills in problem-solving, programming, data analysis, mathematical reasoning, algorithm design, software development and much more.
+              I attended Queen Mary's University of London, where I pursued a Bachelors degree with Honours in Computer Science and Mathematics, a joint honours degree. I've learnt a lot throughout this journey. From the wide range of modules I studied, I’ve gained skills in problem-solving, programming, data analysis, mathematical reasoning, algorithm design, software development and much more.
               </p>
 
-              <p>
-              I am currently working towards achieving a <strong>First-Class Honours.</strong>
-              </p>
-
-              <h3>Year 1 Modules (Achieved: First – 85%)</h3>
+              <h3>Year 1 Modules (Averaged 85%)</h3>
               <ul>
                 <li>Automata and Formal Languages</li>
                 <li>Calculus I</li>
@@ -92,7 +92,7 @@ function Education() {
                 <li>Vectors and Matrices</li>
               </ul>
 
-              <h3>Year 2 Modules (Achieved: First – 78%)</h3>
+              <h3>Year 2 Modules (Averaged 78%)</h3>
               <ul>
                 <li>Algorithms and Data Structures</li>
                 <li>Graphical User Interfaces</li>
@@ -103,7 +103,7 @@ function Education() {
                 <li>Software Engineering Project</li>
               </ul>
 
-              <h3>Year 3 Modules (Current Average after First Semester: 83%, awaiting final results)</h3>
+              <h3>Year 3 Modules (Averaged 72%)</h3>
               <ul>
                 <li>Big Data Processing</li>
                 <li>Compilers</li>
